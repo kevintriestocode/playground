@@ -22,5 +22,11 @@ for name in names where name.hasPrefix("S") {
  Will not work because you cannot append to a constant.
  If the array was declare with "var", it would work. :D */
 
-
+/*This message is after I pushed the Playground.playground to GitHub. Will try to:
+ 1. pull
+ 2. commit
+ 3. push
+ 4. exit Xcode
+ 5. reopen Xcode and select GitHub repo.
+ 6. Hopefully you see this future Kevin!
 
