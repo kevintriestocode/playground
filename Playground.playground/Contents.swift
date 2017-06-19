@@ -29,4 +29,5 @@ for name in names where name.hasPrefix("S") {
  4. exit Xcode
  5. reopen Xcode and select GitHub repo.
  6. Hopefully you see this future Kevin!
+ */
 
