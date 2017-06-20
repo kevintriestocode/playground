@@ -9,12 +9,27 @@ for character in str.characters {
     print(character)
 }
 
-let names = ["Serenity", "Sulaco", "Enterprise", "Galactica"]
+let thisArray = ["Shoe", "Shirt", "Boxers", "Beanie"]
 
-print(names[0])
+print(" ")
 
-for name in names where name.hasPrefix("S") {
-    print("\(name) is \(name.characters.count) characters long")
+print(thisArray[0])
+
+print(" ")
+
+for item in thisArray where item.hasPrefix("S") {
+    print("\(item) is \(item.characters.count) characters long")
+}
+
+print(" ")
+
+//Below prints "S" prefix w/ characters.count.
+for item in thisArray {
+    if item.hasPrefix("S") {
+        print("\(item) is \(item.characters.count) characters long")
+    } else {
+        print(item)
+    }
 }
 
 // Since the "names" array was declared with "let", it is a constant, therefore it cannot change.
