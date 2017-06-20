@@ -154,4 +154,12 @@ func firstString(havingPrefix prefix: String, in strings: [String]) -> String? {
 }
 
 //But what do you return if the array doesn't contain a string you're looking for? Well because this function was declared to return a string, the only option you have is some valid string value. In this case, the empty string... but this is not good Swift code.
-//However, Optionals are perfect for representing values that may be missing so you just need to change the return pipe of this function to be an Optional String by writing a "?" after "String", and now you can return "nil" when the string isn't found. (Done above
+//However, Optionals are perfect for representing values that may be missing so you just need to change the return type of this function to be an Optional String by writing a "?" after "String", and now you can return "nil" when the string isn't found. (Done above)
+
+var guests = ["Jack", "Kumar", "Onita", "Bonna"] //Change names to start with "A" or not.
+
+if let guest = firstString(havingPrefix: "A", in: guests) {
+    print ("\(guest) starts with 'A'")
+} else {
+    print("No guest in guests hasPrefix(\"A\")")
+}
