@@ -79,7 +79,7 @@ default:
 //without "default" you get - error: switch must be exhaustive, consider adding a default clause
 
 let userName = "bob"
-let passwordIsValid = false
+let passwordIsValid = true
 switch (userName, passwordIsValid) {
 case ("admin", true):
     print("Welcome back, admin")
@@ -96,6 +96,49 @@ case (_, let isValid):
     //Note: doesn't have default statement because it is already complete.
     //Final case covers all of the possible conditions not already matched above
 }
+print()
 
+//-----------------------------------------------------------
+
+//FUNCTIONS AND CLOSURES:
+func sendMessage() {
+    let message = "Hey there!"
+    print(message)
+}
+sendMessage()
+
+//now let's add parameter to func...
+//ex. funch sendMessage(parameterName: TYPE)
+
+func sendMessage2(shouting: Bool) {     //The Parameter's name provides a label for the argument you pass in. Labelling arguments makes your code read better and makes the purpose/intent of each argument clear. Bool is Argument, shouting is Argument label.
+    var message2 = "Hey there!"
+    if shouting {
+        message2 = message2.uppercased()
+    }
+    print(message2)
+}
+sendMessage2(shouting: true)
+
+//now let's add a recipient parameter, with an EXPLICIT ARGUMENT LABEL infront...
+//additionally, add a message parameter of type String...
+func sendMessage3(_ message: String, to recipient: String, shouting: Bool) {
+    //you can use "to" when you call the func: sendMessage3()
+    //and you can still use "recipient inside body of function. (Look below)
+    
+    var message3 = "\(message), \(recipient)!"    //Included "recipient's name using STRING INTERPOLATION. \(string)
+    if shouting {
+        message3 = message3.uppercased()
+    }
+    print(message3)
+}
+
+sendMessage3("This is argument needs no label, thanks to the underscore!", to: "Kevin", shouting: true)
+
+/*Review:
+ 1. func functionName() {define here}
+ 2. functionName(parameterName: TYPE) ... parameterName aka label, for argument you pass (TYPE)
+ 3. Explicit Argument Label: (expArgLabel parameterName: TYPE) can use either word for calling the func or for use inside body of func
+ 4. Omitting Argument Labels: (_ parameterName: TYPE) ... don't need label when you call the func, just the argument. 
+ */
 
 
