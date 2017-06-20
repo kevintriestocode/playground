@@ -4,38 +4,78 @@ import UIKit
 
 var str = "Hello"
 print(str)
-
 for character in str.characters {
     print(character)
 }
 
 let thisArray = ["Shoe", "Shirt", "Boxers", "Beanie"]
-
-print(" ")
-
-print(thisArray[0])
-
-print(" ")
-
 for item in thisArray where item.hasPrefix("S") {
     print("\(item) is \(item.characters.count) characters long")
 }
 
-print(" ")
+let names = ["Lily", "Santiago", "Justyn", "Aadya"]
+// an array of String values
 
-//Below prints "S" prefix w/ characters.count.
-for item in thisArray {
-    if item.hasPrefix("S") {
-        print("\(item) is \(item.characters.count) characters long")
-    } else {
-        print(item)
-    }
+let ages = ["Mohsen": 17, "Amy": 40, "Graham": 5]
+// a dictionary with String keys and Int values
+
+for (name, age) in ages {
+    print("\(name), \(age)yrs")
+}
+// For-In loop iterating over key & value. (name, age) known as a "tuple"
+
+/* while !endOfFile {
+    readLine()
+} */            //Loops: While and Repeat-While
+
+/* repeat {
+    performTask()
+} while tasksRemaining >0 */
+
+var packingList = ["Socks", "Shoes"]
+print(packingList[0])
+packingList.append("Trousers") //at index[2]
+packingList[2] = "Jeans" //change item at [2] to "Jeans"
+packingList.append(contentsOf: ["Shorts", "Sandals", "Sunblock"])
+packingList[3...5] = ["Hoodie", "Scarf"]
+//pass range into subscript. Note: changing 3 items with 2
+print(packingList)
+
+//Adding to dictionary: note: var, not let. Initializing new "ages2" dictionary because of previous one in use.
+var ages2 = ["Mohsen": 17, "Amy": 40, "Graham": 5]
+ages2["Justyn"] = 67    //Adds new value for the "Justyn" Key.
+ages2["Justyn"] = 68    //Changes value for the same Key, "Justyn".
+
+//Retrieving a Value from a dictionary: (Using let ages = [])
+let possibleAge = ages["Amy"]
+//Optionals:
+//let possibleAge: Int? = ages["Daryl"]
+
+//Int?. ? means there might or might not be a value.
+
+if possibleAge == nil {
+    print("age not found")
 }
 
-// Since the "names" array was declared with "let", it is a constant, therefore it cannot change.
-/* values.names.append("Steven")
- Will not work because you cannot append to a constant.
- If the array was declare with "var", it would work. :D */
+//If-Let Statement
+if let age = ages["Amy"] {
+    print("An age of \(age) was found")
+}
+//Says: if the dictionary(ages[]) contains a value for amy, let a new constant called "age" equal that value.
 
-/* Final commit with push.
- Will I see the intermediate commite w/out push?*/
+let myAge = 91
+switch myAge {
+case 1:
+    print("Happy 1st Bday")
+case 13...19:
+    print("Happy teens!")
+case let decade where decade % 10 == 0:
+    print("Happy \(decade)th birthday!")
+default:
+    print("HBD :/")
+}
+//default catches every other case that's not defined.
+//without "default" you get - error: switch must be exhaustive, consider adding a default clause
+
+
+
