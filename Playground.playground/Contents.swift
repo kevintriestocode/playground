@@ -163,3 +163,19 @@ if let guest = firstString(havingPrefix: "A", in: guests) {
 } else {
     print("No guest in guests hasPrefix(\"A\")")
 }
+print()
+
+//FILTERING NUMBERS
+//func filterInts(_ numbers: [Int], _ includeNumber: type) -> [Int] {...}
+
+/* SYNTAX for FUNCTION TYPES.
+All function types in swift have this basic form:
+(parameter types) -> return type
+
+func sendMessage3() {...}
+    () -> Void... Void means it doesn't return any values.
+
+func  firstString(havingPrefix prefix: String, in strings: [String]) -> String? {...}
+    (String, [String]) -> String? Takes a string, an array of strings, and returns optional string
+*/ //24:28 
+
