@@ -139,6 +139,19 @@ sendMessage3("This is argument needs no label, thanks to the underscore!", to: "
  2. functionName(parameterName: TYPE) ... parameterName aka label, for argument you pass (TYPE)
  3. Explicit Argument Label: (expArgLabel parameterName: TYPE) can use either word for calling the func or for use inside body of func
  4. Omitting Argument Labels: (_ parameterName: TYPE) ... don't need label when you call the func, just the argument. 
- */
+ */; print()
 
+//FUNCTION RETURN VALUES:
+//Let's look at some of the ways functions can return values. Let's say you want to write a function that returns a first string in an array, that has a give prefix. The function takes a stringPrefix, an array of strings, and it returns the string with the given prefix. As you can see, you use an arrow to indicate what type of values your function can return... in the case below: String.
 
+func firstString(havingPrefix prefix: String, in strings: [String]) -> String? {
+    for string in strings {
+        if string.hasPrefix(prefix) {
+            return string
+        }
+    }
+    return nil
+}
+
+//But what do you return if the array doesn't contain a string you're looking for? Well because this function was declared to return a string, the only option you have is some valid string value. In this case, the empty string... but this is not good Swift code.
+//However, Optionals are perfect for representing values that may be missing so you just need to change the return pipe of this function to be an Optional String by writing a "?" after "String", and now you can return "nil" when the string isn't found. (Done above
