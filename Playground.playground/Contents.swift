@@ -37,5 +37,5 @@ for item in thisArray {
  Will not work because you cannot append to a constant.
  If the array was declare with "var", it would work. :D */
 
-/* Intermediate commit with no push.
- Will I see this on GitHub? */
+/* Final commit with push.
+ Will I see the intermediate commite w/out push?*/
