@@ -1,7 +1,12 @@
 //: Playground - noun: a place where people can play
+//: [Next page](@next)
+    //The followup line of markup adds a link to the next page of the playground.
+/// Use three forward slash (/) characters for a single line of markup Quick Help.
+
 
 import UIKit
-
+print("Highlight section of code | Command + / | to \"Comment out\" ")
+print("Highlight section of code | Command + [ or ] | to \"Indent L or R\" ")
 var str = "Hello"
 print(str)
 for character in str.characters {
@@ -177,5 +182,5 @@ func sendMessage3() {...}
 
 func  firstString(havingPrefix prefix: String, in strings: [String]) -> String? {...}
     (String, [String]) -> String? Takes a string, an array of strings, and returns optional string
-*/ //24:28 
+*/ //24:28
 
