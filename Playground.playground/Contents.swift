@@ -63,6 +63,7 @@ if let age = ages["Amy"] {
 }
 //Says: if the dictionary(ages[]) contains a value for amy, let a new constant called "age" equal that value.
 
+//Switch Statement:
 let myAge = 91
 switch myAge {
 case 1:
@@ -76,6 +77,25 @@ default:
 }
 //default catches every other case that's not defined.
 //without "default" you get - error: switch must be exhaustive, consider adding a default clause
+
+let userName = "bob"
+let passwordIsValid = false
+switch (userName, passwordIsValid) {
+case ("admin", true):
+    print("Welcome back, admin")
+case ("guest", _):
+    print("Guests are not allowed in this restricted area.")
+    //guest not allowed even if passwordIsValid = true. So we can ignore the password with "_" and means to just match any possible value.
+    
+    //For all other users, don't care username, just password. So ignore username with "_".
+    //Create temporary constant: isValid
+//Terniary condiontal operator (_?_:_) - if isValid, "welcome", otherwise "deny".
+case (_, let isValid):
+    print(isValid ? "Welcome to the restricted area!" : "ACCESS DENIED.")
+    
+    //Note: doesn't have default statement because it is already complete.
+    //Final case covers all of the possible conditions not already matched above
+}
 
 
 
