@@ -201,5 +201,15 @@ func filterInts(_ numbers: [Int], _ includeNumber: (Int) -> Bool) -> [Int] {
             //Notice that inside the body of filterInts(), the (includeNumber:) parameter is treated as the name of the function it's passed in. That's how you write a function that takes another function as a parameter.
         }
     }
+    return result //filterInts() is expected to return -> [Int] so must end with "return", and var result is declared with type array of [Int]
 }
+
+func divisibleByTwo(_ number: Int) -> Bool {
+    return number % 2 == 0
+    
+    // the TYPE of divisibleByTwo matches the TYPE of includeNumber parameter, so we can pass the divisibleByTwo function as an argument to filterInts.
+}
+let numbers = [4, 17, 34, 41, 82]
+let evenNumbers = filterInts(numbers, divisibleByTwo)
+print(evenNumbers)
 
