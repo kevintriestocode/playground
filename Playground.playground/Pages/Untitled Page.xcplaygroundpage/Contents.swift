@@ -27,6 +27,16 @@ let ages = ["Mohsen": 17, "Amy": 40, "Graham": 5]
 for (name, age) in ages {
     print("\(name), \(age)yrs")
 }
+
+
+
+
+
+
+
+
+
+
 // For-In loop iterating over key & value. (name, age) known as a "tuple"
 
 /* while !endOfFile {
@@ -46,7 +56,14 @@ packingList[3...5] = ["Hoodie", "Scarf"]
 //pass range into subscript. Note: changing 3 items with 2
 print(packingList)
 
-//Adding to dictionary: note: var, not let. Initializing new "ages2" dictionary because of previous one in use.
+
+
+
+
+
+
+
+// Adding to dictionary: note: var, not let. Initializing new "ages2" dictionary because of previous one in use.
 var ages2 = ["Mohsen": 17, "Amy": 40, "Graham": 5]
 ages2["Justyn"] = 67    //Adds new value for the "Justyn" Key.
 ages2["Justyn"] = 68    //Changes value for the same Key, "Justyn".
@@ -62,11 +79,21 @@ if possibleAge == nil {
     print("age not found")
 }
 
+
+
+
+
 //If-Let Statement
 if let age = ages["Amy"] {
     print("An age of \(age) was found")
 }
 //Says: if the dictionary(ages[]) contains a value for amy, let a new constant called "age" equal that value.
+
+
+
+
+
+
 
 //Switch Statement:
 let myAge = 91
@@ -103,9 +130,15 @@ case (_, let isValid):
 }
 print()
 
-//-----------------------------------------------------------
 
-//FUNCTIONS AND CLOSURES:
+
+
+
+
+
+
+
+// FUNCTIONS AND CLOSURES:
 func sendMessage() {
     let message = "Hey there!"
     print(message)
@@ -147,8 +180,16 @@ sendMessage3("This is argument needs no label, thanks to the underscore!", to: "
  4. Omitting Argument Labels: (_ parameterName: TYPE) ... don't need label when you call the func, just the argument. 
  */; print()
 
-//FUNCTION RETURN VALUES:
-//Let's look at some of the ways functions can return values. Let's say you want to write a function that returns a first string in an array, that has a give prefix. The function takes a stringPrefix, an array of strings, and it returns the string with the given prefix. As you can see, you use an arrow to indicate what type of values your function can return... in the case below: String.
+
+
+
+
+
+
+
+// FUNCTION RETURN VALUES:
+
+//"Let's look at some of the ways functions can return values. Let's say you want to write a function that returns a first string in an array, that has a give prefix. The function takes a stringPrefix, an array of strings, and it returns the string with the given prefix. As you can see, you use an arrow to indicate what type of values your function can return... in the case below: String."
 
 func firstString(havingPrefix prefix: String, in strings: [String]) -> String? {
     for string in strings {
@@ -159,8 +200,8 @@ func firstString(havingPrefix prefix: String, in strings: [String]) -> String? {
     return nil
 }
 
-//But what do you return if the array doesn't contain a string you're looking for? Well because this function was declared to return a string, the only option you have is some valid string value. In this case, the empty string... but this is not good Swift code.
-//However, Optionals are perfect for representing values that may be missing so you just need to change the return type of this function to be an Optional String by writing a "?" after "String", and now you can return "nil" when the string isn't found. (Done above)
+//"But what do you return if the array doesn't contain a string you're looking for? Well because this function was declared to return a string, the only option you have is some valid string value. In this case, the empty string... but this is not good Swift code."
+//"However, Optionals are perfect for representing values that may be missing so you just need to change the return type of this function to be an Optional String by writing a "?" after "String", and now you can return "nil" when the string isn't found. (Done above)"
 
 var guests = ["Jack", "Kumar", "Onita", "Bonna"] //Change names to start with "A" or not.
 
@@ -171,8 +212,15 @@ if let guest = firstString(havingPrefix: "A", in: guests) {
 }
 print()
 
-//FILTERING NUMBERS
-//func filterInts(_ numbers: [Int], _ includeNumber: type) -> [Int] {...}
+
+
+
+
+
+
+
+
+// FILTERING NUMBERS
 
 /* SYNTAX for FUNCTION TYPES.
 All function types in swift have this basic form:

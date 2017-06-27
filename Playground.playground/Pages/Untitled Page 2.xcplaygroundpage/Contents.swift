@@ -22,7 +22,27 @@ func divisibleByTwo(_ number: Int) -> Bool {
     return number % 2 == 0
 }
 
-let evenNumbers = filterInts(numbers, divisibleByTwo)
+let evenNumbers = filterInts(numbers, { (_ number: Int) -> Bool in return number % 2 == 0 })
+/*
+Type Inference In Closures
+let evenNumbers = filterInts(numbers, { number in return number % 2 == 0 })
+let evenNumbers = filterInts(numbers, { number in number % 2 == 0 })
+Implicit Arguments In Closures
+let evenNumbers = filterInts(numbers, { $0 % 2 == 0 })
+Trailing Closures
+let evenNumbers = filterInts(numbers) { $0 % 2 == 0 }
+*/ //:29:01 
 print(evenNumbers)
+
+
+
+
+
+
+
+
+
+
+
 
 //: [Next](@next)
